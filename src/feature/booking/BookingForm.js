@@ -8,7 +8,7 @@ import {useEffect, useState} from "react";
 
 const FormField = ({label, error, isInvalid, children}) => (
     <FormControl isInvalid={isInvalid}>
-        <FormLabel>{label}</FormLabel>
+        <FormLabel aria-label={label}>{label}</FormLabel>
         {children}
         <FormErrorMessage>{error}</FormErrorMessage>
     </FormControl>
@@ -70,7 +70,7 @@ const BookingForm = () => {
 
 
     return (
-        <form className="booking-form" onSubmit={formik.handleSubmit}>
+        <form className="booking-form" onSubmit={formik.handleSubmit} aria-label={"Booking form"}>
             <HStack spacing={4}>
                 <FormField
                     label="Choose date"
