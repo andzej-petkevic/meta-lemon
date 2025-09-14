@@ -1,6 +1,9 @@
 const Nav = () => {
-    return(
-        <nav></nav>
+    return (
+        <nav>
+            <a href="/">Home</a>
+            <a href="/booking">Booking</a>
+        </nav>
     )
 }
 
