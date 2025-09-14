@@ -1,8 +1,12 @@
+import {HStack} from "@chakra-ui/react";
+
 const Nav = () => {
     return (
         <nav>
-            <a href="/">Home</a>
-            <a href="/booking">Booking</a>
+            <HStack spacing={8}>
+                <a href="/">Home</a>
+                <a href="/booking">Booking</a>
+            </HStack>
         </nav>
     )
 }

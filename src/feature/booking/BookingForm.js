@@ -1,4 +1,4 @@
-import {Button, FormControl, FormErrorMessage, FormLabel, HStack, Input, Select} from "@chakra-ui/react";
+import {Button, FormControl, FormErrorMessage, FormLabel, HStack, Input, Select, VStack} from "@chakra-ui/react";
 import {useFormik} from "formik";
 import * as Yup from 'yup';
 import {useBookingContext} from "../../context/bookingContext";
@@ -71,7 +71,7 @@ const BookingForm = () => {
 
     return (
         <form className="booking-form" onSubmit={formik.handleSubmit} aria-label={"Booking form"}>
-            <HStack spacing={4}>
+            <VStack spacing={4}>
                 <FormField
                     label="Choose date"
                     error={formik.errors.date}
@@ -107,9 +107,8 @@ const BookingForm = () => {
                         {occasions.map(occasion => <option key={occasion} value={occasion}>{occasion}</option>)}
                     </Select>
                 </FormField>
-            </HStack>
+            </VStack>
             <Button type="submit">Make Your reservation</Button>
-            <div>{JSON.stringify(formik.getFieldProps('date'))}</div>
         </form>
     )
 }

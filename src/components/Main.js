@@ -11,15 +11,12 @@ const Main = () => {
         occasion: ""
     });
 
-    const handleBookingSave = (event) => {
-        console.log(event);
-    }
 
     return(
         <main>
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
-                <Route path="/booking" element={<BookingPage bookingInfo={bookingInfo} setBookingInfo={setBookingInfo} saveBooking={handleBookingSave}/>}/>
+                <Route path="/booking" element={<BookingPage />}/>
             </Routes>
         </main>
     )
